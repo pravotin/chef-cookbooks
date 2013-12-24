@@ -32,9 +32,11 @@ default['nginx']['binary']       = '/usr/sbin/nginx'
 
 case node['platform_family']
 when 'debian'
+  default['nginx']['root_suffix'] = 'www'
   default['nginx']['user']       = 'www-data'
   default['nginx']['init_style'] = 'runit'
 when 'rhel', 'fedora'
+  default['nginx']['root_suffix']       = 'html'
   default['nginx']['user']        = 'nginx'
   default['nginx']['init_style']  = 'init'
   default['nginx']['repo_source'] = 'epel'
