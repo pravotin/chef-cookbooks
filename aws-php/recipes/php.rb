@@ -39,7 +39,12 @@ if platform?("ubuntu")
 
 end
 
-if platform?("amazon") 
-  include_recipe "php"
+node['php']['packages'].each do |pkg|
+  package pkg do
+    action :install
+  end
 end
+#if platform?("amazon") 
+#  include_recipe "php"
+#end
 
