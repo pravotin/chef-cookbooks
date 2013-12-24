@@ -59,7 +59,7 @@ end
 
 template "php-test-file" do
   path "/usr/share/nginx/#{node[:nginx][:root_suffix]}/info.php"
-  source "php-test.erb"
+  source "php.info.erb"
   owner "root"
   group "root"
   mode 0644
