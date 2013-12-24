@@ -1,3 +1,5 @@
+#default[:opsworks][:skip_uninstall_of_other_rails_stack] = 't'
+default[:opsworks][:server][:name] = 'nginx'
 case node["platform_family"]
   when "rhel"
     default['php']['packages'] = ['php55', 'php55-devel', 'php55-cli', 'php55-fpm', 'php55-mysqlnd', 'php-pear']
