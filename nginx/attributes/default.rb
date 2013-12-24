@@ -30,6 +30,7 @@ default['nginx']['script_dir']   = '/usr/sbin'
 default['nginx']['log_dir']      = '/var/log/nginx'
 default['nginx']['binary']       = '/usr/sbin/nginx'
 
+default['nginx']['root_prefix'] = '/usr/share/nginx/'
 case node['platform_family']
 when 'debian'
   default['nginx']['root_suffix'] = 'www'
